@@ -14,11 +14,17 @@ int main(void)
 		'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
 		'u', 'v', 'w', 'x', 'y', 'z'
 	};
-	int i;
+	char upper[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	int i, j;
 
 	for (i = 0; i < 26; i++)
 	{
 		putchar(alphabet[i]);
+	}
+
+	for (j = 0; j < 26; j++)
+	{
+		putchar(upper[j]);
 	}
 	putchar('\n');
 
