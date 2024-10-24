@@ -1,7 +1,9 @@
 #include "main.h"
-/**
- * print_alphabet - prints alphabet lowercase
- */
+
+/*
+* print_alphabet - sxvgfg
+*/
+
 void print_alphabet(void)
 {
 	char letter;
