@@ -1,12 +1,18 @@
 #include "main.h"
 
-/*
-* print_abs - sxvgfg
-*/
-int _abs(int a)
+/**
+ * _abs - used to print sign
+ * @n: the character to check
+ * Return: absolute value of a number
+ */
+int _abs(int n)
 {
-	if (a <= 0)
-		return (1);
+	if (n >= 0)
+	{
+		return (n);
+	}
+	else
+	{
+		return (0);
+	}
 }
-
-return (0);
