@@ -1,10 +1,14 @@
-#include "main.h"
+#include"main.h"
+
 /**
- * add - two integers and returns the result
- * @n: the character to check
+ * add - Entry point
+ * @x: -first int
+ * @y: second int
+ * Return the sum of two int numbers;
  * Return: 0
  */
-int add(int a, int b)
+
+	int add(int x, int y)
 {
-return ( a + b);
+	return (x + y);
 }
