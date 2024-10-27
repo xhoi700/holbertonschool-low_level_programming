@@ -1,11 +1,15 @@
-#include "main.h"
+#include"main.h"
 
-/*
-* print__islower - sxvgfg
-*/
+/**
+ * _islower - checks for lowercase character
+ * @c: the character to check
+ * Return: 1 if c is lowercase, 0 otherwise
+ */
+
 int _islower(int c)
+
 {
-	if (c >= 'a' && c <= 'z')
+	if (97 <= c &&  122 >= c)
 	{
 		return (1);
 	}
