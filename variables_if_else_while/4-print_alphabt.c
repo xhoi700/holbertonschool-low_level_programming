@@ -1,17 +1,15 @@
 #include <stdio.h>
 /**
- *  * main - entry point
- *  * Return: 0
+ * * main - entry point
+ * * Return: 0
  */
 int main(void)
 {
 	char i;
-	char j;
 
 	for (i = 'a'; i <= 'z'; i++)
+	if (i != 'q' && i != 'e')
 		putchar(i);
-	for (j = 'A'; j <= 'Z'; j++)
-		putchar(j);
 	putchar('\n');
 	return (0);
 }
