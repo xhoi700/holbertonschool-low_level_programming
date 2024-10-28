@@ -1,17 +1,25 @@
 #include "main.h"
+
 /**
- * print_last_digit - check the code
- *
- * Returns: the value of the last digit
+ *  * print_last_digit - Entry point
+ *   * @n: is parameter
+ *    * return abs(n);
+ *     * Return:0
  */
+
 int print_last_digit(int n)
 {
-	if (n >= 0)
+	n = n % 10;
+
+	if (n < 0)
 	{
-		return(last_digit);
+		n = -n;
+		_putchar(n + '0');
+		return (n);
 	}
 	else
 	{
-		return(-last_digit);
+		_putchar (n + '0');
+		return (n);
 	}
 }
