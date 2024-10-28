@@ -1,20 +1,18 @@
 #include "main.h"
 
-/*
-* print_alphabet 10 times - sxvgfg
-*/
+/**
+ *  * print_alphabet - Entry point
+ *   * Return:0
+ */
 
-void print_alphabet_x10(void)
+void print_alphabet(void)
 {
-	int i;
-	char letter;
+	char c;
 
-	for (i = 1; i <= 10; i++)
+	for (c = 'a'; c <= 'z'; c++)
 	{
-		for (letter = 'a'; letter <= 'z'; letter++)
-		{
-			_putchar(letter);
-		}
-		_putchar('\n');
+		_putchar(c);
 	}
+	_putchar('\n');
 }
+
