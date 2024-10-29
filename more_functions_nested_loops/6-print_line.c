@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * more_numbers - function print except 2,4
+ * print_line - a straight line 
  * main.h header file
  * Return:0
  */
