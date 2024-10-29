@@ -2,7 +2,6 @@
 /**
  * print_line - draws a straight line
  * main.h header file
- * Return:0
  */
 
 void print_line(int n)
