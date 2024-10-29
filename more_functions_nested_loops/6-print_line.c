@@ -2,7 +2,7 @@
 /**
  * print_line - draws a straight line
  * main.h header file
- * Return:0
+ * @n number of times
  */
 
 void print_line(int n)
