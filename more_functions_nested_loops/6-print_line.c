@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * print_line - draws a straight line
+ * more_numbers - function print except 2,4
  * main.h header file
+ * Return:0
  */
 
 void print_line(int n)
