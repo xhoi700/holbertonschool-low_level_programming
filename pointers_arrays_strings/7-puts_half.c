@@ -1,16 +1,28 @@
 #include "main.h"
+
 /**
- *puts2 - prints every other character of a string,
- *@str: dtrfuy
+ *puts_half - ghvjh
+ *@str: fghjk
  */
 
 void puts_half(char *str)
+{
+int len = 0;
+	int i;
 
-int i;
+	while (str[len] != '\0')
+		len++;
 
-for (i = 0; s[i] != '\0'; i++)
-	if( i / 2 == 0)
-	_putchar(str[i]);
+	if ((len - 1) % 2 == 1)
 	{
-		if
+		for (i = len / 2; i < len; i++)
+		{
+			_putchar(str[i]);
+		}
 	}
+	else
+		for (i = len / 2 + 1; i < len; i++)
+			_putchar(str[i]);
+
+	_putchar('\n');
+}
