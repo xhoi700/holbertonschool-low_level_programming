@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- *cap_string - ytfyugu
- *@str: tfyugui
- *Return: sedfdf
+ *puts2 - fytgy
+ *@str: ydrtfuygu
  */
 
 void puts2(char *str)
