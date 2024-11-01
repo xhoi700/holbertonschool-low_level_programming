@@ -5,10 +5,12 @@
  *@dest: holds value for input
  *@src: holds value for input
  *@n: holds value for input
- *Return: (ptr)
+ *Return: (dest)
  */
 
- char *_strncpy(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
+{
+	char *_strncpy(char *dest, char *src, int n)
 {
 	int i;
 
@@ -21,4 +23,5 @@
 		dest[i] = '\0';
 	}
 	return (dest);
+}
 }
