@@ -11,3 +11,4 @@ int _atoi(char *s);
 int _putchar(char c);
 void _puts(char *str);
 void puts2(char *str);
+char *_strcat(char *dest, char *src);
