@@ -33,5 +33,3 @@ This project includes a set of tasks focused on C programming basics, including 
   Write a function that encodes a string into "1337" (leet) speak. Specific characters are replaced with corresponding leet symbols to alter the string format.
 
 - **Filename: `assembly_code_generator`**  
-
-
