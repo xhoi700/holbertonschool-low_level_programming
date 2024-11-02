@@ -2,10 +2,11 @@
 #include <stdio.h>
 
 /**
- * print_array - print an array of integers
- * @a: an array of integers
- * @n: the number of elements to swap
+ *reverse_array - aedas
+ *@a: dscd
+ *@n: aaca
  */
+
 void reverse_array(int *a, int n)
 {
 int i, tmp;
