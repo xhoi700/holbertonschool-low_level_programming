@@ -1,19 +1,33 @@
-#include <stdio.>
-#include "main.h"
+#include <stdio.h>
 /**
- * main - check the code
+ * main- function entry point
  *
- * Return: Always 0.
+ * Return: 0
  */
-int main()
+
+int main(void)
 {
 	int i;
-	char fizz = 'FIZZ';
-	char Buzz = 'BUZZ';
+	char fizz[] = "Fizz";
+	char buzz[] = "Buzz";
 
-	for (i = 0 ; i <= 100; i++)
+	for (i = 1; i <= 100; i++)
 	{
-		if(i == 100);
-		printf("%s", buzz)
+		if (i == 100)
+		{
+			printf("%s", buzz);
+			break;
+		}
+		if ((i % 3 == 0) && (i % 5 == 0))
+			printf("%s%s ", fizz, buzz);
+		else if (i % 3 == 0)
+			printf("%s ", fizz);
+		else if (i % 5 == 0)
+			printf("%s ", buzz);
+		else
+			printf("%d ", i);
 	}
+	printf("\n");
+
+	return (0);
 }
