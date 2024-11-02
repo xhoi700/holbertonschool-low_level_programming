@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *rev_string - a string to uppercase.
+ *rev_string -  lowercase letters of a string to uppercase.
  *@s: an array of integers
  */
 
