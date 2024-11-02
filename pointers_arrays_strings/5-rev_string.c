@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- *rev_string - fgvh
- *@s: dtrfuy
+ *rev_string - a string to uppercase.
+ *@s: an array of integers
  */
 
 void rev_string(char *s)
