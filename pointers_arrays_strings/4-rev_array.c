@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- *reverse_array - aedas
- *@a: dscd
- *@n: aaca
+ *reverse_array - content of an array of integers.
+ *@a: an array of integers
+ *@n: the number of elements to swap
  */
 
 void reverse_array(int *a, int n)
