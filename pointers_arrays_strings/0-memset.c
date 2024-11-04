@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
-* _memset - filles memory with byte
-@s: prints the memory
-@b: char to put
-@n: number of times
-* Return (s)
-*/
+ *_memset - sdda
+ *@s: ssfd
+ *@b: szda
+ *@n: aedsc
+ *Return: sedd
+ */
+
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
