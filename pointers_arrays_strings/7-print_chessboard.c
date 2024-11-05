@@ -1,8 +1,9 @@
-#include "main.h"
+#include <stdio.h>
 /**
  * print_chessboard - pritn a chessboard
  * @a: pointer to a matrix
  */
+
 void print_chessboard(char (*a)[8])
 {
 	int i, j;
@@ -11,7 +12,8 @@ void print_chessboard(char (*a)[8])
 	{
 		for (j = 0; j < 8; j++)
 		{
-			_putchar(a[i][j]);		}
+			printf("%c", a[i][j]);
+		}
+		printf("\n");
 	}
-_putchar('\n');
 }
