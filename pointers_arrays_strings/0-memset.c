@@ -1,12 +1,13 @@
-#include "main.h"
+include "main.h"
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
- *
- * Return: Nothing.
+ *_memset - sdda
+ *@s: ssfd
+ *@b: szda
+ *@n: aedsc
+ *Return: sedd
  */
+
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
