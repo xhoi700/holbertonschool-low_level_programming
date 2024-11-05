@@ -1,5 +1,4 @@
-#include "main.h"
-#include <unistd>
+#include <stddef.h>
 /**
  * _strstr - functions to compare a string in another string
  * @haystack: pointer to string
@@ -7,10 +6,7 @@
  * haystac_i index of the haystack need_i index  of needle
  * Return: point to nth char
  */
-
 char *_strstr(char *haystack, char *needle)
-{
-	char *_strstr(char *haystack, char *needle)
 {
 
 	for (; *haystack != '\0'; haystack++)
@@ -28,5 +24,4 @@ char *_strstr(char *haystack, char *needle)
 	}
 
 	return (NULL);
-}
 }
