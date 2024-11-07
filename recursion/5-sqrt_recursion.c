@@ -1,23 +1,26 @@
 #include "main.h"
-/*
-*_sqrt_primary - primary recursive function
-*@n: number to check
-*@r: the root number
-Return: Return: -1 for not sqr root if it is have root natural
-*/
-int _sqrt_primary(int n, int r)
+/**
+ * _sqrt - function to find the root
+ * @n: number sq
+ * @root: num for multiplies
+ * Return: -1 for not sqr root if it is have root natural
+ */
+
+int _sqrt(int n, int root)
 {
-	if (r * r == n)
-	{
-		return (r);
-	}
-	if (r * r > n)
-	{
+	if (root * root == n)
+		return (root);
+	if (root * root > n)
 		return (-1);
-	}
-	return (_sqrt_primary(n, r + 1));
+	else
+		return (_sqrt(n, root + 1));
 }
+/**
+ * _sqrt_recursion - function for root
+ * @n: number to check
+ * Return: root of num;
+ */
 int _sqrt_recursion(int n)
 {
-	return (_sqrt_primary(n, 0));
+	return (_sqrt(n, 0));
 }
