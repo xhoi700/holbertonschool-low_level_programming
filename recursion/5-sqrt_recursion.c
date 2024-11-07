@@ -3,7 +3,7 @@
 *_sqrt_primary - primary recursive function
 *@n: number to check
 *@r: the root number
-Return: (r)
+Return: Return: -1 for not sqr root if it is have root natural
 */
 int _sqrt_primary(int n, int r)
 {
