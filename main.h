@@ -1,0 +1,1 @@
+void pairwithsum(int arr[], int size, int target);
