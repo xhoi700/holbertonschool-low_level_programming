@@ -1,8 +1,23 @@
 #include "main.h"
+#include <stdlib.h>
+
 /**
- * simple_print_buffer - prints buffer in hexa
- * @c: the address of memory to print
- * @unsigned int size: the size of the memory to print
+ * free_grid - frees a 2 dimensional grid.
+ * @grid: multidimensional array of integers.
+ * @height: height of the grid.
  *
- * Return: Nothing.
+ * Return: no return
  */
+void free_grid(int **grid, int height)
+{ 
+	int i;
+	if (grid != NULL && height != 0)
+	{
+		for (i = 0; i < height; i++)
+		{
+			free(grid[i]);
+		}
+		free(grid);
+	}
+
+}
