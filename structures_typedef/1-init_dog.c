@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include"dog.h"
-
 /**
  * init_dog -entry point,initializes a variable
  * @d: -points to specific memory
