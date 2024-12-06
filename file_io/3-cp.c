@@ -24,7 +24,6 @@ void closefd(int fd1, int fd2)
 	}
 }
 
-
 /**
  * main - Entry point
  * @argc: -number of argumenst supplied to argv
