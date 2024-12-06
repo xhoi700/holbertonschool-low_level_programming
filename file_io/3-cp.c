@@ -1,72 +1,92 @@
-#include <unistd.h>
-#include <fcntl.h>
-#include <sys/types.h>
-#include <sys/stat.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+#define BUFFER_SIZE 1024
 
 /**
- * closefd - closes file descriptors
- *@fd1: first file
- *@fd2: second file
+ * close_file - close file
+ * @fd1: file form
+ * @fd2: file to
  */
-void closefd(int fd1, int fd2)
+void close_file(int fd1, int fd2)
 {
 	if (close(fd1) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd1);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
 		exit(100);
 	}
+
 	if (close(fd2) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd2);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
 		exit(100);
 	}
 }
-
 /**
- * main - Entry point
- * @argc: -number of argumenst supplied to argv
- * @argv: -array of arguments
- * Return: (0);
+ * cp - copy file to another
+ * @file_from: file that will be copied
+ * @file_to: file where will be saved the copy
  */
+void cp(char *file_from, char *file_to)
+{
+	int fd_from, fd_to;
+	ssize_t read_count, write_count;
+	char buffer[BUFFER_SIZE];
 
+	fd_from = open(file_from, O_RDONLY);
+	if (fd_from == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		exit(98);
+	}
+	fd_to = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (fd_to == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
+		close(fd_from);
+		exit(99);
+	}
+	while ((read_count = read(fd_from, buffer, BUFFER_SIZE)) > 0)
+	{
+		write_count = write(fd_to, buffer, read_count);
+		if (write_count == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
+			close(fd_from);
+			close(fd_to);
+			exit(99);
+		}
+	}
+	if (read_count == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		close(fd_from);
+		close(fd_to);
+		exit(98);
+	}
+	close_file(fd_from, fd_to);
+}
+/**
+ * main - copies the content of a file to another file
+ * @argc: argument count
+ * @argv: argument vector
+ *
+ * Return: 0 on success, or a positive integer on failure
+ */
 int main(int argc, char *argv[])
 {
-	int fdr, fdw;
-	char buffer[1024 * 8];
-	int n, m;
-
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	fdr = open(argv[1], O_RDONLY);
-	fdw = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
-	if (fdr == -1)
+	if (argv[1] == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	if (fdw == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
-	}
-		n = read(fdr, buffer, 1024 * 8);
-		if (n == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			exit(98);
-		}
-		m = write(fdw, buffer, n);
-		if (m == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			exit(99);
-		}
-		closefd(fdr, fdw);
+	cp(argv[1], argv[2]);
 	return (0);
 }
-
